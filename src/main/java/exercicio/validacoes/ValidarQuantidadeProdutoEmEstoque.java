@@ -2,7 +2,7 @@ package exercicio.validacoes;
 
 import exercicio.Venda;
 
-public class ValidarQuantidadeProdutoEmEstoque {
+public class ValidarQuantidadeProdutoEmEstoque implements ValidaVendaInterface{
 
     public void validar(Venda venda){
         if (venda.produto.getQuantidade() <= 0 )

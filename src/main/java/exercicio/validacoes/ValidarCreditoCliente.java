@@ -2,7 +2,7 @@ package exercicio.validacoes;
 
 import exercicio.Venda;
 
-public class ValidarCreditoCliente {
+public class ValidarCreditoCliente implements ValidaVendaInterface{
 
     public void validar(Venda venda){
         if (venda.cliente.getCredito() < venda.produto.getPreco())

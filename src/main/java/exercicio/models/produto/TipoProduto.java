@@ -1,4 +1,4 @@
-package exercicio;
+package exercicio.models.produto;
 
 public enum TipoProduto {
     PADRAO(1, "Produto padrao"),

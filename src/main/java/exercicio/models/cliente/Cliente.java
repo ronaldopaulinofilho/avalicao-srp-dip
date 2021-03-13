@@ -1,11 +1,17 @@
 package exercicio.models.cliente;
 
+import exercicio.models.produto.Produto;
+
 public class Cliente {
     private Integer id;
     private String login;
     private String cpf;
     private TipoCliente tipo;
     private float credito;
+
+    public Cliente() {
+
+    }
 
 
     public Integer getId() {
@@ -55,5 +61,10 @@ public class Cliente {
         this.tipo = tipo;
         this.credito = credito;
     }
+
+    public void diminuirCredito(Produto produto) {
+       credito = credito - produto.getPreco();
+    }
+
 
 }

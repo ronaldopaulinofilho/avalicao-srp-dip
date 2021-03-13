@@ -1,13 +1,11 @@
 package exercicio.models.cliente;
 
-import exercicio.models.produto.RepositorioDeProdutoInterface;
-
 import java.util.ArrayList;
 import java.util.Optional;
 
 import static exercicio.models.cliente.TipoCliente.*;
 
-public class RepositorioArrayDeCliente {
+public class RepositorioArrayDeCliente implements RepositorioDeClienteInterface {
 
     private ArrayList<Cliente> clientes = new ArrayList<Cliente>();
 

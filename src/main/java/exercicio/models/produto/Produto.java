@@ -1,13 +1,15 @@
 package exercicio.models.produto;
 
-import exercicio.TipoProduto;
-
 public class Produto {
     private Integer id;
     private String nome;
     private float preco;
     private Integer quantidade;
     private TipoProduto tipo;
+
+    public Produto() {
+
+    }
 
     public Integer getId() {
         return id;
@@ -41,10 +43,11 @@ public class Produto {
         this.preco = preco;
     }
 
-    public Produto(Integer id, String nome, float preco, Integer quantidade) {
+    public Produto(Integer id, String nome, float preco, TipoProduto tipo, Integer quantidade) {
         this.id = id;
         this.nome = nome;
         this.preco = preco;
+        this.tipo = tipo;
         this.quantidade = quantidade;
     }
 
@@ -74,5 +77,9 @@ public class Produto {
         result = 31 * result + (nome != null ? nome.hashCode() : 0);
         result = 31 * result + (preco != +0.0f ? Float.floatToIntBits(preco) : 0);
         return result;
+    }
+
+    public void diminuirQuantidade() {
+        quantidade--;
     }
 }
