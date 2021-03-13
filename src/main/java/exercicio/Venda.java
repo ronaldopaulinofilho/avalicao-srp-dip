@@ -40,6 +40,7 @@ public class Venda {
         TipoProduto tipoDoProduto = produto.getTipo();
         PromocaoInterface promocao = PromocaoFactory.criarPromocao(tipoDoCliente);
         ImpostoInterface imposto = ImpostoFactory.gerarImposto(tipoDoProduto);
+        imposto.gerar(produto);
         promocao.aplicar(produto);
         cliente.diminuirCredito(produto);
         produto.diminuirQuantidade();
