@@ -13,6 +13,8 @@ public class Main {
         RepositorioDeProdutoInterface repositorioDeProduto = new RepositorioArrayDeProduto();
         RepositorioDeClienteInterface repositorioDeCliente = new RepositorioArrayDeCliente();
         Venda venda = new Venda(repositorioDeProduto, repositorioDeCliente);
+        ValidaVenda validaVenda = new ValidaVenda();
+        validaVenda.validar(venda);
         venda.efetuarVenda();
 
     }
