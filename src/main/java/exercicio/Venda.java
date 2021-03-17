@@ -35,7 +35,6 @@ public class Venda {
         Produto produto = repositorioDeProduto.buscarPeloId(idDoProduto);
         Integer idDoCliente = EntradaTerminal.entradaInteira("Escolha o seu tipo de Cliente\n 1 - Pessoa Física\n 2- Pessoa Jurídica\n 3 - Funcionário");
         Cliente cliente = repositorioDeCliente.buscarPeloId(idDoCliente);
-        new ValidaVenda().validar(this);
         TipoCliente tipoDoCliente = cliente.getTipo();
         TipoProduto tipoDoProduto = produto.getTipo();
         PromocaoInterface promocao = PromocaoFactory.criarPromocao(tipoDoCliente);
